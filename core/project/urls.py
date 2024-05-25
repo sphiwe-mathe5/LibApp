@@ -1,0 +1,20 @@
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+from core.project.settings import ADMIN_PATH
+from core.views import index, contact, services, about, enquire
+
+
+
+
+urlpatterns = [
+    path('', index, name='index'),
+    path('items/', include('item.urls')),
+    path('admin/', admin.site.urls),
+    path('contact/', contact, name='contact'),
+    path('services/', services, name='services'),
+    path('about/', about, name='about'),
+    path('', include('newsletter.urls')),
+    path('enquire/', enquire, name='enquire'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

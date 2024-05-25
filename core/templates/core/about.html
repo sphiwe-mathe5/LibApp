@@ -1,0 +1,367 @@
+{% load static %}
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
+    <script nomudule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="website icon" type="png" href="{% static 'images\pageicon.png' %}">
+    <title>{% block title %}{% endblock %} Libubu Mining</title>
+
+</head>
+<body>
+
+<header class="header">
+  <a href="{% url 'index' %}" class="logo"><img src="{% static 'images/WhatsApp_Image_2024-05-15_at_15.19.37-removebg-preview.png' %}" alt="Logo" width="280" height="70"></a>
+  <div id="menu-btn">☰</div>
+    <nav class="navbar">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="#about">About</a>
+        <a href="{% url 'index' %}#services">Services</a>
+        <a href="{% url 'index' %}#projects">Projects</a>
+        <a href="{% url 'index' %}#blog">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="{% url 'item:items' %}">News</a>
+
+    </nav>
+
+
+    
+</header>
+
+
+<section class="learn" id="learn">
+
+  <h1 class="heading">Learn more Libubu Mining</h1>
+  <div class="row">
+      <div class="image">
+          <img src={% static 'images\WhatsApp Image 2024-05-15 at 14.59.12.jpeg' %} alt="Description of the image">
+      </div>
+
+      <div class="content">
+          <h1 class="text-black  font-semibold">Providing a turnkey Solution</h1><br>
+          <p>At Libubu Mining Group, we aim to help our clients run cost-effective and productive operations through our extensive experience and deep knowledge of the mining industry. Our turnkey solutions encompass every aspect of the mining process, from initial exploration and feasibility studies to final extraction and processing.<br><br></p>
+           <p>Through our turnkey approach, we manage every phase of the project, allowing our clients to focus on their core business while we handle the complexities of the mining operations. Our goal is to enhance productivity, reduce costs, and ensure the long-term success of our clients' projects<br><br></p>
+          <h1 class="text-black font-semibold ">Why us ? </h1><br>
+          <p>We have the capacity and experience needed to Conduct Contract Mining, Mineral processing and Engineering services to its clients <br>We have qualified Mining Mechanical, Electrical and Process enginners in our Team</p>
+      </div>
+  </div>
+
+
+</section>
+
+
+
+<section class="gallery" id="gallery">
+
+  <h1 class="heading">Gallery</h1>
+
+  <div class="box-container">
+
+      <a href="{% static 'images\gallery4.jpeg' %}"class="box">
+        <div class="image">
+            <img src="{% static 'images\gallery4.jpeg' %}" alt="">
+        </div>
+        <div class ="content">
+          <div class="info">
+            <h3>Exploration</h3>
+          </div>
+          <i class="fas fa-plus"></i>
+        </div>
+      </a>
+
+
+      <a href="{% static 'images\gallery2.jpeg' %}"class="box">
+        <div class="image">
+            <img src="{% static 'images\gallery2.jpeg' %}" alt="">
+        </div>
+        <div class ="content">
+          <div class="info">
+            <h3>Extraction</h3>
+          </div>
+          <i class="fas fa-plus"></i>
+        </div>
+      </a>
+
+      <a href="{% static 'images\gallery5.jpeg' %}"class="box">
+        <div class="image">
+            <img src="{% static 'images\gallery5.jpeg' %}" alt="">
+        </div>
+        <div class ="content">
+          <div class="info">
+            <h3>Processing</h3>
+          </div>
+          <i class="fas fa-plus"></i>
+        </div>
+      </a>
+
+      <a href="{% static 'images\gallery3.jpeg' %}"class="box">
+        <div class="image">
+            <img src="{% static 'images\gallery3.jpeg' %}" alt="">
+        </div>
+        <div class ="content">
+          <div class="info">
+            <h3>Transportation</h3>
+          </div>
+          <i class="fas fa-plus"></i>
+        </div>
+      </a>
+
+      <a href="{% static 'images\gallery1.jpeg' %}"class="box">
+        <div class="image">
+            <img src="{% static 'images\gallery1.jpeg' %}" alt="">
+        </div>
+        <div class ="content">
+          <div class="info">
+            <h3>Backfilling</h3>
+          </div>
+          <i class="fas fa-plus"></i>
+        </div>
+      </a>
+  </div>
+</section>
+
+
+<section class="mt-10 link" id="link">
+  <h1 class="heading">Link With Us</h1>
+  <div class="row">
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.3246424462013!2d28.05713407507745!3d-26.055644657939474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9573ade1c28109%3A0x5ac2401dd9a5d3bd!2s345%20Rivonia%20Blvd%2C%20Rivonia%2C%20Johannesburg%2C%202128!5e0!3m2!1sen!2sza!4v1716378213864!5m2!1sen!2sza"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+          <form action="{% url 'enquire' %}" method="POST">
+            {% csrf_token %}
+            <h3>Enquire Our Services or Send us a message</h3>
+            <input type="text" name="name" placeholder="name" class="box" required>
+            <input type="email" name="email" placeholder="email" class="box" required>
+            <input type="number" name="phone" placeholder="phone" class="box" required>
+            <select name="service" class="box" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="mining">Mining Contract</option>
+                <option value="engineering">Engineering Services</option>
+                <option value="processing">Mineral Processing</option>
+                <option value="none">None</option>
+            </select>
+            <textarea name="message" placeholder="message" class="box" id="" cols="30" rows="10" required></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
+  </div>
+</section> 
+
+
+<footer class="footer" id="contact">
+  <div class="container grid list">
+      <div class="footer-brand">
+          <a href="#" class="logo" >
+              <a href="{% url 'index' %}" class="logo"><img src="{% static 'images/WhatsApp_Image_2024-05-15_at_15.19.37-removebg-preview.png' %}" alt="Logo" width="280" height="70"></a>
+          </a>
+          <p class="footer-text">
+              &copy; 2022 Libubugroup. <br> All rights reserved.
+          </p>
+      </div>
+
+      <div class="footer-list">
+          <p class="h4 footer-list-title">Get in Touch</p>
+          <address class="footer-text">
+              345 Rivonia Blvd, Edenburg, Rivonia
+          </address>
+          <a href="mailto:Libubugroup@gmail.com" class="footer-link">Libubugroup@gmail.com</a>
+          <a href="tel:+27769446549" class="footer-link">+27 76 944 6549</a>
+      </div>
+
+      <div class="footer-list">
+          <p class="h4 footer-list-title">Learn More</p>
+          <a href="{% url 'about' %}#about" class="footer-link">About Us</a>
+          <a href="{% url 'about' %}#gallery" class="footer-link">Gallery</a>
+          <a href="{% url 'item:items' %}" class="footer-link">News</a>
+          <a href="{% url 'about' %}#link" class="footer-link">Enquire</a>
+      </div>
+
+      <div class="footer-list">
+          <p class="h4 footer-list-title">Our Newsletter</p>
+          <p class="footer-text">
+              Subscribe to our newsletter to get our news delivered to you
+          </p>
+          <form action="{% url 'subscribe' %}" method="POST" class="input-wrapper">
+              {% csrf_token %}
+              <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
+              <button type="submit" class="submit-btn">Join</button>
+          </form>
+      </div>       
+  </div>
+</footer>
+
+<style>
+    /* Default Styles */
+    .pb-6 {
+      padding-bottom: 1.5rem;
+    }
+    .grid {
+      display: grid;
+    }
+    .grid-cols-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .gap-4 {
+      gap: 1rem;
+    }
+    .bg-gray-100 {
+      background-color: #f7fafc;
+    }
+    .col-span-1 {
+      grid-column: span 1 / span 1;
+    }
+    .col-span-3 {
+      grid-column: span 3 / span 3;
+    }
+    .w-full {
+      width: 100%;
+    }
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .border {
+      border-width: 1px;
+    }
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .px-8 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .text-lg {
+      font-size: 1.125rem;
+    }
+    .bg-teal-500 {
+      background-color: #38b2ac;
+    }
+    .text-white {
+      color: #ffffff;
+    }
+    .my-6 {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .font-semibold {
+      font-weight: 600;
+    }
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .px-2 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+    .bg-gray-200 {
+      background-color: #edf2f7;
+    }
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+    .inline-block {
+      display: inline-block;
+    }
+    .bg-yellow-500 {
+      background-color: #ecc94b;
+    }
+    .grid-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .gap-5 {
+      gap: 1.25rem;
+    }
+    .rounded-t-xl {
+      border-top-left-radius: 0.75rem;
+      border-top-right-radius: 0.75rem;
+    }
+    .p-6 {
+      padding: 1.5rem;
+    }
+    .bg-white {
+      background-color: #ffffff;
+    }
+    .rounded-b-xl {
+      border-bottom-left-radius: 0.75rem;
+      border-bottom-right-radius: 0.75rem;
+    }
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+    .text-gray-500 {
+      color: #a0aec0;
+    }
+    
+    /* Media Query for max-width 480px */
+    @media (max-width: 480px) {
+      .grid-cols-4 {
+        grid-template-columns: 1fr;
+      }
+      .col-span-1,
+      .col-span-3 {
+        grid-column: span 1 / span 1;
+      }
+      .gap-4 {
+        gap: 0.5rem;
+      }
+      .grid-cols-3 {
+        grid-template-columns: 1fr;
+      }
+      .gap-5 {
+        gap: 0.5rem;
+      }
+      .py-4 {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+      .px-6 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .mt-2 {
+        margin-top: 0.25rem;
+      }
+      .px-8 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .my-6 {
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+      .py-2 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+      }
+      .px-2 {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+      }
+      .p-6 {
+        padding: 0.5rem;
+      }
+      .text-2xl {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
