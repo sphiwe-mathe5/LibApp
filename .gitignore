@@ -7,8 +7,10 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
-migrations/
-!migrations/__init__.py
+
+# Ignore Django migration folders but not the __init__.py file
+*/migrations/
+!*/migrations/__init__.py
 
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
