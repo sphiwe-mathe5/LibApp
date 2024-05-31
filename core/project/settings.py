@@ -14,7 +14,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'whitenoise.runserver_nonstatic'
+    #'whitenoise.runserver_nonstatic'
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
