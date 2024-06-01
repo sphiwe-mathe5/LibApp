@@ -11,7 +11,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 
 
 
-SECRET_KEY = 'django-insecure-)*%af@mr+8s@xkxm$-q$)_3qwuhtqtgzxwb!&q9@f@sb%d'
+SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app']
@@ -114,6 +114,13 @@ MEDIA_ROOT = BASE_DIR /'media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '456'
+EMAIL_USE_SSL = True
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+ADMIN_EMAIL = config('ADMIN_EMAIL')
 
 #AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 #AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
