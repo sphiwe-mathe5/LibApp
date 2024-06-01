@@ -79,11 +79,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-  
+
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'PUPmyxiPaMOVzAXwuMyydtEYmiqUenrT',
@@ -103,10 +103,13 @@ USE_I18N = True
 
 USE_TZ = True
 
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "project/static")]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'project/static')
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+if os.environ.get("VERCEL"):
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, "project/static")]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'project/static')
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 MEDIA_URL = '/media/'
