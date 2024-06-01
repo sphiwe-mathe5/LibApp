@@ -84,11 +84,11 @@ AUTH_PASSWORD_VALIDATORS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  
-        'NAME': config('DATABASE_NAME'),
-        'USER': config('DATABASE_USER'),
-        'PASSWORD': config('DATABASE_PASSWORD'),
-        'HOST': config('DATABASE_HOST'),
-        'PORT': config('DATABASE_PORT', default='5432'),
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'PUPmyxiPaMOVzAXwuMyydtEYmiqUenrT',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '11107',
     }
 }
 
@@ -122,12 +122,12 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 ADMIN_EMAIL = config('ADMIN_EMAIL')
 
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
-AWS_STORAGE_SIGNATURE_NAME = config('AWS_STORAGE_SIGNATURE_NAME')
-AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME')
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-AWS_S3_VERIFY = True
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+#AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+#AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+#AWS_STORAGE_SIGNATURE_NAME = config('AWS_STORAGE_SIGNATURE_NAME')
+#AWS_S3_REGION_NAME = config('AWS_S3_REGION_NAME')
+#AWS_S3_FILE_OVERWRITE = False
+#AWS_DEFAULT_ACL = None
+#AWS_S3_VERIFY = True
+#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
