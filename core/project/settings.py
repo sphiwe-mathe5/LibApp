@@ -11,7 +11,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 
 
 
-SECRET_KEY = 'django-insecure-)*%af@mr+8s@xkxm$-q$)_3qwuhtqtgzxwb!&q9@f@sb%d'
+
 DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app']
@@ -35,7 +35,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware'
+    'whitenoise.middleware.WhiteNoiseMiddleware'
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
