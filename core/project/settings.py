@@ -106,10 +106,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-if os.environ.get("VERCEL"):
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, "project/static")]
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'project/static')
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "project/static")]
+STATIC_ROOT = os.path.join(BASE_DIR, 'core/project/static', 'project/static')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 MEDIA_URL = '/media/'
