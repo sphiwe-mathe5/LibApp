@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    #'whitenoise.runserver_nonstatic'
+    'whitenoise.runserver_nostatic',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -106,9 +106,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
+# Directory where static files are stored during development
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "project/static")]
-STATIC_ROOT = os.path.join(BASE_DIR, 'core/project/static', 'project/static')
+
+# Directory where static files are collected to for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# WhiteNoise configuration to serve static files
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
