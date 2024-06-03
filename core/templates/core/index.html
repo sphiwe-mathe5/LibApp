@@ -67,18 +67,16 @@
 </div>
 
 <section class="home" id="home">
-    <div class="home-bg" style="position: relative;">
+    <div class="home-bg">
         <img src="static/images/hero.jpeg" alt="hero image" style="height: 80vh; width: 105%; margin-top: 5px; margin-left: -25px;">
-        <div class="dark-overlay">
-            {% if messages %}
+        <div class="dark-overlay">   {% if messages %}
             <ul class="messages text-3xl">
                 {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
                 {% endfor %}
             </ul>
-            {% endif %}
-        </div>
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; z-index: 2; margin-top: 10px;">
+            {% endif %}</div>
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 170%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; z-index: 2; margin-top: 10px;">
             <h1 class="open text-white font-bold mb-4">Open Cast Mining Simplified<br><br></h1>
             <p class="open1 mb-6">We aim to help our clients run cost effective and productive operations<br> through Our experience and knowledge of the mining industry<br><br><br><br></p>
             <div class="button-container" style=" margin-top: 20px;">
