@@ -12,7 +12,7 @@ PROJECT_DIR = Path(__file__).resolve().parent
 
 SECRET_KEY = config('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1']
 
@@ -106,18 +106,18 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Directory where static files are stored during development
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "project/static")]
 
-# Directory where static files are collected to for production
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# WhiteNoise configuration to serve static files
+
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR /'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
