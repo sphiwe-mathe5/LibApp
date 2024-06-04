@@ -14,7 +14,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'libubugroupmining.com']
+ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', '.com']
 
 
 # Application definition
