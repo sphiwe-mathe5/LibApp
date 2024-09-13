@@ -77,7 +77,7 @@
             </ul>
             {% endif %}</div>
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; z-index: 2; margin-top: 10px;">
-            <h1 class="open text-white font-bold mb-4">Open Cast Mining Simplified<br><br></h1>
+            <h1 class="open text-white font-bold mb-4">Open Cast - Underground Mining Simplified<br><br></h1>
             <p class="open1 mb-6">We aim to help our clients run cost effective and productive operations<br> through Our experience and knowledge of the mining industry<br><br><br><br></p>
             <div class="button-container" style=" margin-top: 20px;">
                 <a href="{% url 'about' %}" class="button" style="display: inline-block; margin-top: 2rem; padding: 1rem 3rem;">Learn More</a>
@@ -158,46 +158,99 @@
                 technology to produce high-quality, market-ready products</p>
         </div>
     </div>
+</section>
+
+<section class="services" id="services">
+    <div class="box-container">
+        <div class="box">
+            <img src="static\images\stoneworks.jpeg" alt="service1">
+            <h3>Stone Works</h3>
+            <p></p>
+        </div>
+
+        <div class="box">
+            <img src="static\images\conveyor.jpeg" alt="service2">
+            <h3>Construction And Maintenance Of Conveyor Belts</h3>
+            <p></p>
+        </div>
+
+        <div class="box">
+            <img src="static\images\sidewalk.jpeg" alt="service2" style="margin-right: 10px">
+            <h3>Underground Roof And Sidewalk Support</h3>
+            <p></p>
+        </div>
+        <div class="box">
+            <img src="static\images\ventilation.jpeg" alt="service2" style="margin-right: 10px">
+            <h3>Construction Of Underground Ventilation Structures</h3>
+            <p></p>
+        </div>
+    </div>
     <a href="{% url 'about' %}#link" class="btn" "rounded-lg">Enquire Our Services<a/>
 </section>
 
+<section class="projects" id="projects">
+
+    <h1 class="heading">Projects</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <p>Pallet Points</p>
+        </div>
+
+        <div class="box">
+            <p class= "mt-6">Rock Drilling Service</p>
+        </div>
+
+        <div class="box">
+            <p class= "mt-2">Underground Sealing off.</p>
+        </div>
+        <div class="box">
+            <p class= "mt-6">Provision of front-end loader services</p>
+        </div>
+
+        <div class="box">
+            <p class= "mt-6">Provision of load and haul services</p>
+        </div>
+
+        <div class="box">
+            <p class= "mt-6">Provision of engineering Services</p>
+        </div>
+    </div>
+</section>
 
 <section class="projects" id="projects">
 
-    <h1 class="heading"> Libubu Mining Projects With Clients</h1>
+    <h1 class="heading"> Libubu Mining Clients</h1>
 
     <div class="box-container">
 
         <div class="box">
             <img src="static\images\suiii.jpg" alt="">
-            <p>Provision of load and haul services for a duration of 36 Months </p>
+
         </div>
 
         <div class="box">
             <img src="static\images\coal.jpg" alt="">
-            <p class= "mt-6"> Provision of plant hire services for a duration of 36 Months</p>
         </div>
 
         <div class="box">
             <img src="static\images\Exxaro.jpg" alt="">
-            <p class= "mt-2">Provision of screening and crushing services for a duration of 36 Months.</p>
         </div>
         <div class="box">
             <img src="static\images\south32.jpg" alt="">
-            <p class= "mt-6">Provision of front-end loader services for a duration of 24 Months</p>
         </div>
 
         <div class="box">
             <img src="static\images\mmg.jpg" alt="">
-            <p class= "mt-6">Provision of engineering services for a duration of 60 Months </p>
         </div>
 
         <div class="box">
             <img src="static\images\universe.jpg" alt="">
-            <p class= "mt-6">Provision of engineering Services for a duration of 36 Months .</p>
         </div>
     </div>
 </section>
+
 
 <section class="blog" id="blog">
     <h1 class="heading">Clients Reviews on Libubu Mining</h1>
@@ -311,8 +364,7 @@
             <p class="footer-text">
                 Subscribe to our newsletter to get our news delivered to you
             </p>
-            <form action="{% url 'subscribe' %}" method="POST" class="input-wrapper">
-                {% csrf_token %}
+            <form action="https://formspree.io/f/xvgpnrej" method="POST" class="input-wrapper">
                 <input type="email" name="email_address" placeholder="Email Address" required class="input-field">
                 <button type="submit" class="submit-btn">Join</button>
             </form>
